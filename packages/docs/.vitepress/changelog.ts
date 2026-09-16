@@ -8,6 +8,24 @@ export const tagBaseUrl = 'http://192.168.101.244/FrontendDev/ct-dart3/tree/';
 
 export const changelog: LogEntry[] = [
   {
+    version: '2.1.15',
+    date: '20260915',
+    description:
+      '更改富文本资源域名地址支持同域加载，穿梭框组件标题字体大小调整',
+  },
+  {
+    version: '2.1.14',
+    date: '20260910',
+    description:
+      '更改富文本资源域名地址，头像支持溢出隐藏',
+  },
+  {
+    version: '2.1.13',
+    date: '20260902',
+    description:
+      '修复表格高度计算出现小数点的异常，更改表格内容区tag样式，新增search区域 el-input-number 样式',
+  },
+  {
     version: '2.1.12',
     date: '20260827',
     description:

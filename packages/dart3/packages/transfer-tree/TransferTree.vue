@@ -383,7 +383,7 @@ defineExpose({
       line-height: 1;
       margin-left: 5px;
       color: var(--el-text-color-primary);
-      font-size: 16px;
+      font-size: 14px;
       font-weight: normal;
     }
     .dart-transfer-tree_num {

@@ -273,7 +273,7 @@ const handleError = (err: any) => {
   .el-upload-list__item {
     width: v-bind(pw) !important;
     height: v-bind(ph) !important;
-    overflow: visible !important;
+    // overflow: visible !important;
   }
 
   .el-upload-list__item-actions {

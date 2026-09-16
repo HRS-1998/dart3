@@ -48,8 +48,8 @@ const value = computed({
 });
 
 // const iframeUrl =
-//   '//static.tcy365.com/cdn/ueditor/1433.1/editor/index.html?id=';
-const iframeUrl = `//static.tcy365.com/cdn/ueditor/1433.2/editor/index.html?fontsize=${
+//   '//admin-new.ct108.net/static/cdn/ueditor/1433.1/editor/index.html?id=';
+const iframeUrl = `//admin-new.ct108.net/static/cdn/ueditor/1433.2/editor/index.html?fontsize=${
   props.fontSize as any
 }&id=`;
 const actionList = {

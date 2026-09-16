@@ -67,7 +67,7 @@ const checkMetaOverflow = () => {
   flex-direction: column;
   justify-content: center;
   min-width: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .dart-multirows__name {

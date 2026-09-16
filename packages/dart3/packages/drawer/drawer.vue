@@ -15,7 +15,7 @@
     </template>
 
     <el-scrollbar v-loading="loading" v-if="hasPermission">
-      <div class="mb10 mr32">
+      <div class="mb10">
         <slot />
       </div>
     </el-scrollbar>

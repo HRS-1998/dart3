@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* padding: 10px; */
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.dart-container {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.form-title {
+  font-weight: 500;
+  color: var(--el-text-color-primary);
+  line-height: 20px;
+  &::before {
+    content: '';
+    flex-shrink: 0;
+    width: 4px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 2px;
+    background-color: var(--el-color-primary);
+  }
+}
+
+.sub-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  color: var(--el-text-color-primary);
+  &:hover {
+    color: var(--el-color-primary-light-3);
+  }
+}
+
+.hover-primary {
+  &:hover {
+    color: var(--el-color-primary);
+  }
+  cursor: pointer;
+}
+
+/* 多行表单 label 样式 */
+
+.multi-form-label {
+  .el-form-item--label-right .el-form-item__label {
+    justify-content: flex-end !important;
+  }
+}

@@ -35,3 +35,4 @@ packages/playground/.vite/
 
 dist/
 .history
+doc

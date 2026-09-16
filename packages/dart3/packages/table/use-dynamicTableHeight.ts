@@ -56,7 +56,7 @@ export default function useDynamicTableHeight(
     );
     const currentTableHeight =
       itemHeight.value * dataLen.value + TABLE_HEADER_HEIGHT;
-    // 如果是分页且当前表格高度小于内容高度，则使用当前表格高度，这里加6将横向滚动条下移，(主要目的)去除el-scroll的移入时竖向滚动。否则使用body剩余的内容高度
+    // 如果是分页且当前表格高度小于内容高度，则使用当前表格高度，这里加2将横向滚动条下移，(主要目的)去除el-scroll的移入时竖向滚动。否则使用body剩余的内容高度
     if (currentPaginationHeight && currentTableHeight < contentHeight) {
       return Math.max(MIN_HEIGHT.value, currentTableHeight + FIXED_HEIGHT);
     }

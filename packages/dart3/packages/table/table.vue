@@ -574,7 +574,7 @@ watch(tableHeight, () => {
     justify-content: center;
     width: 31px;
     cursor: pointer;
-    background-color: #eff2fa;
+    // background-color: #eff2fa;
     z-index: 3;
   }
 
@@ -582,6 +582,12 @@ watch(tableHeight, () => {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .el-tag {
+    line-height: 23px;
+    height: 23px;
+    vertical-align: top;
   }
 }
 </style>

@@ -27,6 +27,14 @@
         style="width: 240px"
       />
     </el-form-item>
+    <el-form-item label="级联选择">
+      <el-cascader
+        v-model="form.cascader"
+        :options="cascaderOptions"
+        placeholder="请选择"
+        clearable
+      />
+    </el-form-item>
     <el-form-item label="日期范围">
       <el-date-picker
         v-model="form.date"
@@ -59,6 +67,7 @@ const form = reactive({
   date1: null,
   status1: '',
   status2: '',
+  cascader: [],
 });
 const initials = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
 const options = Array.from({ length: 1000 }).map((_, idx) => ({
@@ -85,6 +94,38 @@ const options1 = [
     label: '选项2',
   },
 ];
+const cascaderOptions = [
+  {
+    value: 'zhinan',
+    label: '指南',
+    children: [
+      {
+        value: 'sheji',
+        label: '设计',
+        children: [
+          { value: 'yizhi', label: '一致' },
+          { value: 'fankui', label: '反馈' },
+        ],
+      },
+      {
+        value: 'daohang',
+        label: '导航',
+        children: [
+          { value: 'cexiang', label: '侧向' },
+          { value: 'dingbu', label: '顶部' },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'zujian',
+    label: '组件',
+    children: [
+      { value: 'basic', label: '基础' },
+      { value: 'form', label: '表单' },
+    ],
+  },
+];
 const onSearch = () => console.log('搜索', form);
 const onReset = () => {
   Object.assign(form, {
@@ -92,6 +133,7 @@ const onReset = () => {
     status: '',
     status1: '',
     status2: '',
+    cascader: [],
     date: null,
     dept: '',
     date1: null,

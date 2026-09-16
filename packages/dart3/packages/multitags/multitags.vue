@@ -69,6 +69,7 @@ const items = computed(() => {
 
   &__tags {
     min-width: 0;
+    line-height: 24px;
     // 行内排列 + 单行省略：行末超出的 tag 显示 "…"
     // 被省略的内容仍在文档流中，外层 show-overflow-tooltip 可正常触发并展示全部 tag
     overflow: hidden;
@@ -78,6 +79,7 @@ const items = computed(() => {
 
   &__tag {
     // 行内流不支持 gap，用右间距代替
+    vertical-align: top;
     margin-right: 6px;
     font-size: 12px;
     color: #7b869f;

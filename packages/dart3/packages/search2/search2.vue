@@ -193,17 +193,23 @@ defineExpose({
 }
 .dart-search2-wrapper {
   --form-item-label-color: #4f5b75;
-  padding: 16px 16px 0;
+  padding: var(--spacing-base) var(--spacing-base) 0;
   background-color: #fff;
   border-radius: 8px;
   border-radius: var(--el-border-radius-base);
   background: var(--el-bg-color);
   box-shadow: var(--card-shadow);
   .content-container {
+   
     display: grid;
     grid-template-rows: var(--dart-expanded-height, 1fr);
     transition: grid-template-rows 0.35s ease;
     overflow: hidden;
+
+    --shadow-safe-area: 2px;
+    // 将裁剪边界向上扩展，但保持表单和组件占用位置不变
+    padding-top: var(--shadow-safe-area);
+    margin-top: calc(-1 * var(--shadow-safe-area));
 
     &.is-collapsed {
       grid-template-rows: var(--dart-item-height);
@@ -310,7 +316,12 @@ defineExpose({
         // box-shadow: none;
       }
     }
-    //   selectV2 样式
+    //   cascader 样式
+    .el-cascader {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     // 单个日期 ，多个日期 样式
     .el-date-editor.el-input__wrapper {
@@ -329,6 +340,10 @@ defineExpose({
   .el-form--inline .el-form-item {
     margin-right: 16px !important;
     margin-bottom: 16px !important;
+  }
+
+  .el-input-number {
+    width: 100%;
   }
 }
 </style>

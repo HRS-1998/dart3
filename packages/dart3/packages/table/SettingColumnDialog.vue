@@ -229,7 +229,7 @@ watch(
     justify-content: space-between;
     &-right {
       display: inline-flex;
-      gap: 12px;
+      /* gap: 12px; */
     }
   }
   .column-table {

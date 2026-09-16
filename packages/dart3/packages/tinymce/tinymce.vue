@@ -43,6 +43,14 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'init', 'change']);
 
+// 当前域名包含 ct108 时，使用当前域名+端口加载 CDN 资源（便于在 wujie 中保持同域）
+const getCdnOrigin = () => {
+  if (window.location.hostname.includes('ct108')) {
+    return `//${window.location.host}`;
+  }
+  return '//admin-new.ct108.net';
+};
+
 let mounting = true;
 
 const state = reactive<any>({
@@ -89,7 +97,7 @@ const initEditor = () => {
   }
 
   const settingConfig: any = {
-    language_url: '//static.tcy365.com/cdn/tinymce/6.4.2/langs/zh-Hans.js',
+    language_url: `${getCdnOrigin()}/static/cdn/tinymce/6.4.2/langs/zh-Hans.js`,
     language: 'zh-Hans',
     content_style:
       'body { font-family:Microsoft YaHei,Helvetica,Arial,sans-serif; font-size:14px }',
@@ -151,7 +159,7 @@ onMounted(() => {
     initEditor();
     return;
   }
-  const scriptSrc = '//static.tcy365.com/cdn/tinymce/6.4.2/tinymce.min.js';
+  const scriptSrc = `${getCdnOrigin()}/static/cdn/tinymce/6.4.2/tinymce.min.js`;
   scriptLoader.load(scriptSrc, initEditor);
 });
 
