@@ -1,0 +1,17 @@
+{
+  "name": "ct-dart3-workspace",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev:playground": "pnpm -C packages/playground dev",
+    "dev:docs": "pnpm -C packages/docs dev",
+    "build:inner": "pnpm -C packages/docs build",
+    "build:dart3": "pnpm -C packages/dart3 build",
+    "linkGlobal": "pnpm -C packages/dart3 linkGlobal",
+    "dev:dart3": "pnpm -C packages/dart3 dev",
+    "publish:dart3": "pnpm -C packages/dart3 publish"
+  },
+  "dependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
